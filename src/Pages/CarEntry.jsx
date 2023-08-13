@@ -355,7 +355,7 @@ export const CarEntry = () => {
           />
         </Form.Group>
         {/* <Form onSubmit={handleInvoiceSubmit}> */}
-        <Table striped bordered>
+        <Table striped bordered responsive> 
           <thead>
             <tr>
               <th>Service Name</th>
