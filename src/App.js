@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import { CarEntry } from "./Pages/CarEntry";
 import AppNavbar from "./Components/AppNavbar";
 import CustomerManagement from "./Pages/CustomerManagement";
@@ -20,6 +20,7 @@ function App() {
             />
         <AppNavbar />
         <Routes>
+        <Route path="/" exact element={<CustomerManagement/>} /> 
           <Route path="/car-entry/:id" element={<CarEntry />} />
           <Route path="/customer-details" element={<CustomerManagement />} />
           <Route path="/new-customer" element={<NewCustomerForm />} />

@@ -161,36 +161,36 @@ const CustomerManagement = () => {
                 <td>{customer.email}</td>
                 <td>{customer.phone}</td>
                 <td>
-                  <Button className="mx-2" variant="info" size="sm"onClick={()=>handleCustomerShow(customer)}>
-                    View Details
+                  <Button className="m-2" variant="info" size="sm"onClick={()=>handleCustomerShow(customer)}>
+                    <small>View Details</small>
                   </Button>
                   <Button
                     onClick={()=>handleShow(customer)}
-                    className="mx-2"
+                    className="m-2"
                     variant="dark"
                     size="sm"
                   >
-                    Enter New Vehicle Details
+                     <small>Add New Vehicle Details</small> 
                   </Button>
                   {
                     customer.serviceRequests.length>0 &&
-                  <Button className="mx-2" variant="success" size="sm"  as={Link}
+                  <Button className="m-2" variant="success" size="sm"  as={Link}
                   to={`/service-history/${customer.id}`}>
-                    View Service History
+                    <small>View Service History</small>  
                   </Button>
 }
                  {customer.vehicles.length>0 && <Button
                     as={Link}
                     to={`/car-entry/${customer.id}`}
-                    className="mx-2"
+                    className="m-2"
                     variant="primary"
                     size="sm"
                   >
-                    Start New Service
+                     <small>Start New Service</small> 
                   </Button>
 }
                   <Button onClick={()=>handleDelete(customer)} className="mx-2" variant="danger" size="sm">
-                    Delete
+                  <small> Delete </small>
                   </Button>
                 </td>
               </tr>
