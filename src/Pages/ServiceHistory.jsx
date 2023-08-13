@@ -46,7 +46,7 @@ const ServiceHistory = () => {
   return (
     <Container>
       <h2>Service History</h2>
-      <Table striped bordered hover>
+      <Table striped bordered hover responsive>
         <thead>
           <tr>
           <th>Sno</th>
